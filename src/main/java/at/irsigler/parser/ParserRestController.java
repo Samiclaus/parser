@@ -27,7 +27,7 @@ public class ParserRestController {
 
     @RequestMapping("/test")
     public String test() {
-        return parserService.getTestString();
+        return parserService.getEWZUrl();
     }
 
     @RequestMapping("/testfile")
@@ -50,8 +50,8 @@ public class ParserRestController {
 
     @RequestMapping("/ewz")
     public ResponseEntity<InputStreamResource> parseEWZ(
-            @RequestParam(value = "countryCode", defaultValue = "") String countryCode,
+            @RequestParam(value = "countrycode", defaultValue = "") String countrycode,
             @RequestParam(value = "year", defaultValue = "2018") String year) throws IOException {
-        return parserService.getEZWFile(countryCode, year);
+        return parserService.getEZWFile(countrycode, year);
     }
 }

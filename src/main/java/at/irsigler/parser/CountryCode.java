@@ -3,6 +3,10 @@ package at.irsigler.parser;
 public enum CountryCode {
     BURGENLAND("1"), KAERNTEN("2"), NIEDEROESTERREICH("3"), OBEROESTERREICH("4"), SALZBURG("5"), STEIERMARK("6"), TIROL("7"), VORARLBERG("8"), WIEN("9");
 
+    public String getCode() {
+        return code;
+    }
+
     private String code;
 
     CountryCode(String code) {
